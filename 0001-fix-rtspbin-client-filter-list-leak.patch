@@ -1,0 +1,23 @@
+diff --git a/gst-plugin-rtspbin/rtspbin.c b/gst-plugin-rtspbin/rtspbin.c
+index d9100bd4..4a6eee4d 100644
+--- a/gst-plugin-rtspbin/rtspbin.c
++++ b/gst-plugin-rtspbin/rtspbin.c
+@@ -222,6 +222,7 @@ static void
+ gst_rtsp_bin_deinit_server (GstRtspBin * rtspbin)
+ {
+   GstRTSPMountPoints *mounts;
++  GList *clients;
+ 
+   GST_INFO_OBJECT (rtspbin, "Disconnecting existing clients");
+ 
+@@ -231,8 +232,9 @@ gst_rtsp_bin_deinit_server (GstRtspBin * rtspbin)
+   g_object_unref (mounts);
+ 
+   // Filter existing clients and remove them
+-  gst_rtsp_server_client_filter (rtspbin->server,
++  clients = gst_rtsp_server_client_filter (rtspbin->server,
+       gst_rtsp_bin_client_filter, NULL);
++  g_list_free (clients);
+ 
+   if (rtspbin->server) {
+     g_clear_pointer (&(rtspbin->server), gst_object_unref);

@@ -1,0 +1,26 @@
+pkgbase = gst-plugins-imsdk
+	pkgdesc = Qualcomm GStreamer IMSDK plugins for camera, ML inference, video processing and streaming
+	pkgver = 1.0
+	pkgrel = 1
+	url = https://github.com/qualcomm/gst-plugins-imsdk
+	arch = aarch64
+	license = BSD-3-Clause-Clear
+	makedepends = git
+	makedepends = cmake
+	depends = gstreamer
+	depends = gst-plugins-base
+	depends = librdkafka
+	depends = qcom-smart-venc-ctrl-algo
+	depends = mosquitto
+	depends = qcom-qnn-sdk
+	depends = qcom-snpe-sdk
+	depends = hiredis
+	depends = opencv-fastcv
+	depends = json-glib
+	depends = libtensorflow-lite
+	source = gst-plugins-imsdk::git+https://github.com/qualcomm/gst-plugins-imsdk.git#commit=6a084f46f7e0215ca14927586d8b5166db8d0c00
+	source = 0001-fix-rtspbin-client-filter-list-leak.patch
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = gst-plugins-imsdk
