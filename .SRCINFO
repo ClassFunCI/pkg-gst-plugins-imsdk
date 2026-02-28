@@ -1,7 +1,7 @@
 pkgbase = gst-plugins-imsdk
 	pkgdesc = Qualcomm GStreamer IMSDK plugins for camera, ML inference, video processing and streaming
 	pkgver = 1.0
-	pkgrel = 3
+	pkgrel = 4
 	url = https://github.com/qualcomm/gst-plugins-imsdk
 	arch = aarch64
 	license = BSD-3-Clause-Clear
@@ -9,6 +9,8 @@ pkgbase = gst-plugins-imsdk
 	makedepends = cmake
 	depends = gstreamer
 	depends = gst-plugins-base
+	depends = gst-plugins-bad
+	depends = gst-plugins-good
 	depends = gst-rtsp-server
 	depends = qcom-camera-service
 	depends = librdkafka
