@@ -9,11 +9,11 @@ arch=('aarch64')
 url="https://github.com/qualcomm/gst-plugins-imsdk"
 license=('BSD-3-Clause-Clear')
 depends=(
-  'gstreamer'
-  'gst-plugins-base'
-  'gst-plugins-bad'
-  'gst-plugins-good'
-  'gst-rtsp-server'
+  'gstreamer-qti-oss'
+  # 'gst-plugins-base'
+  # 'gst-plugins-bad'
+  # 'gst-plugins-good'
+  # 'gst-rtsp-server'
   'qcom-camera-service'
   'librdkafka'
   'qcom-smart-venc-ctrl-algo'
