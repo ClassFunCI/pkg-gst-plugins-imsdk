@@ -3,7 +3,7 @@
 
 pkgname=gst-plugins-imsdk
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Qualcomm GStreamer IMSDK plugins for camera, ML inference, video processing and streaming"
 arch=('aarch64')
 url="https://github.com/qualcomm/gst-plugins-imsdk"
@@ -20,6 +20,7 @@ depends=(
   'opencv-fastcv'
   'json-glib'
   'libtensorflow-lite'
+  'eigen'
 )
 makedepends=('git' 'cmake')
 source=("${pkgname}::git+https://github.com/qualcomm/gst-plugins-imsdk.git#commit=6a084f46f7e0215ca14927586d8b5166db8d0c00"
